@@ -26,7 +26,7 @@ It is debug-signed. Updates install over it only while signed with the same key 
 everyone reinstalls once).
 
 ## Keep accurate
-- iPhone needs iOS 26+ (deployment target 26.4) — change help.html if that's lowered. Android 8+.
+- iPhone needs iOS 17+ (app target IPHONEOS_DEPLOYMENT_TARGET = 17.0) — keep help.html in step if it changes. Android 8+.
 - Behaviors described: listen counted only at end of playback; Mark as Heard (date); remove a date
   (swipe on iPhone, × on Android); iPhone book swipes (right = Heard It, left = Play); speed 0.75–2×;
   ⟲15 / 30⟳; downloads (talk row, book menu, Manage Downloads, auto-remove default ON, iPhone pauses
