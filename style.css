@@ -1,0 +1,155 @@
+/* Growing Christians — shared stylesheet
+   Same layout system as the BookIt / GrillIt / PrayIt / RememberIt sites; colors from the
+   app: deep green icon background and the app's green accent. */
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,700;0,800;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+/* ── Tokens ── */
+:root {
+  --ink:          #1B1D1C;
+  --ink-muted:    #5C6560;
+  --deep:         #00382B;   /* icon background */
+  --accent:       #2E7D4A;   /* app accent */
+  --accent-dark:  #23613A;
+  --accent-pale:  #E6F2EA;
+  --gold:         #C9A54A;
+  --gold-pale:    #F8F1DD;
+  --ground:       #F4F6F3;
+  --surface:      #FFFFFF;
+  --border:       #DDE4DE;
+  --nav-bg:       #00382B;
+  --nav-text:     #B9D3C4;
+  --radius:       12px;
+  --shadow:       0 2px 12px rgba(0,56,43,.10);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink:          #EDF2EE;
+    --ink-muted:    #A2B0A7;
+    --deep:         #00261D;
+    --accent:       #5DBB7E;
+    --accent-dark:  #4CA46B;
+    --accent-pale:  #16291E;
+    --gold:         #E0C06A;
+    --gold-pale:    #2A2614;
+    --ground:       #0C1411;
+    --surface:      #15201B;
+    --border:       #26352D;
+    --nav-bg:       #00261D;
+    --nav-text:     #94B3A1;
+    --shadow:       0 2px 16px rgba(0,0,0,.45);
+  }
+}
+
+/* ── Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--ground);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 {
+  font-family: 'Bitter', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  text-wrap: balance;
+  color: var(--ink);
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+p { max-width: 65ch; }
+p + p { margin-top: .9em; }
+ul, ol { padding-left: 1.3em; }
+li + li { margin-top: .35em; }
+strong { font-weight: 600; }
+code { overflow-wrap: anywhere; font-size: .92em; }
+img { max-width: 100%; }
+
+/* ── Nav ── */
+.site-nav { position: sticky; top: 0; z-index: 100; background: var(--nav-bg); }
+.nav-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 28px; height: 60px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.nav-logo {
+  font-family: 'Bitter', serif; font-size: 1.15rem; font-weight: 700; color: #fff;
+  display: flex; align-items: center; gap: 9px;
+}
+.nav-logo:hover { text-decoration: none; }
+.nav-logo img { width: 30px; height: 30px; border-radius: 7px; display: block; }
+.nav-links { display: flex; align-items: center; gap: 6px; list-style: none; padding: 0; }
+.nav-links li + li { margin-top: 0; }
+.nav-links a {
+  color: var(--nav-text); font-size: .92rem; font-weight: 500;
+  padding: 6px 12px; border-radius: 6px;
+}
+.nav-links a:hover, .nav-links a[aria-current="page"] {
+  color: #fff; background: rgba(255,255,255,.09); text-decoration: none;
+}
+.nav-links .nav-cta { background: var(--accent); color: #fff; font-weight: 600; padding: 7px 16px; }
+.nav-links .nav-cta:hover { background: var(--accent-dark); }
+
+/* ── Layout ── */
+.page-content { max-width: 1100px; margin: 0 auto; padding: 0 28px 80px; }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 24px; border-radius: 10px;
+  font-family: inherit; font-size: 1rem; font-weight: 600;
+  border: none; cursor: pointer;
+  transition: transform .12s, box-shadow .12s;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,.18); text-decoration: none; }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-dark); }
+.btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--border); }
+.btn-ghost:hover { background: var(--accent-pale); }
+.btn small { font-weight: 400; opacity: .85; }
+
+/* ── Cards / utilities ── */
+.eyebrow {
+  font-size: .78rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--accent);
+}
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow);
+}
+.note {
+  background: var(--gold-pale); border-left: 4px solid var(--gold);
+  border-radius: 8px; padding: 14px 18px; font-size: .95rem; margin: 18px 0;
+}
+.tip {
+  background: var(--accent-pale); border-left: 4px solid var(--accent);
+  border-radius: 8px; padding: 14px 18px; font-size: .95rem; margin: 18px 0;
+}
+.phone {
+  width: 100%; max-width: 280px; border-radius: 36px;
+  border: 8px solid #111; box-shadow: 0 18px 40px rgba(0,0,0,.25); display: block;
+  background: #111;
+}
+
+/* ── Footer ── */
+.site-footer { background: var(--nav-bg); color: var(--nav-text); padding: 40px 28px; margin-top: 80px; font-size: .9rem; }
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+}
+.footer-inner p { max-width: 60ch; }
+.footer-links { display: flex; gap: 20px; list-style: none; padding: 0; }
+.footer-links li + li { margin-top: 0; }
+.footer-links a { color: var(--nav-text); }
+.footer-links a:hover { color: #fff; }
+
+@media (max-width: 640px) {
+  .nav-links li:not(:last-child) { display: none; }
+  .nav-inner { padding: 0 16px; }
+  .page-content { padding: 0 16px 60px; }
+}

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help — Growing Christians app</title>
+<meta name="description" content="How to install and use the Growing Christians app: play the Talks for Growing Christians, keep track of what you've heard, download talks for offline listening, start a new round, and back up your history.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+.help-hero { padding: 56px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px; }
+.help-hero h1 { font-size: clamp(2rem, 4vw, 2.7rem); margin-top: .3em; }
+.help-hero p { font-size: 1.08rem; color: var(--ink-muted); margin-top: .7em; }
+
+.help-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 48px; align-items: start; }
+
+.help-sidebar { position: sticky; top: 80px; }
+.help-sidebar nav { display: flex; flex-direction: column; gap: 2px; }
+.help-sidebar a {
+  color: var(--ink-muted); font-size: .93rem; font-weight: 500;
+  padding: 6px 12px; border-radius: 7px;
+}
+.help-sidebar a:hover { background: var(--accent-pale); color: var(--accent); text-decoration: none; }
+.help-sidebar .group {
+  font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-muted); padding: 16px 12px 4px;
+}
+.help-sidebar .group:first-child { padding-top: 0; }
+
+.help-section { margin-bottom: 60px; scroll-margin-top: 80px; }
+.help-section h2 {
+  font-size: 1.55rem; display: flex; align-items: center; gap: 12px;
+  padding-bottom: 12px; border-bottom: 2px solid var(--border); margin-bottom: 22px;
+}
+.help-section h2 .ico {
+  width: 36px; height: 36px; border-radius: 9px; background: var(--accent-pale);
+  display: grid; place-items: center; font-size: 1.05rem; flex-shrink: 0;
+}
+.help-section h3 { font-size: 1.12rem; margin: 26px 0 8px; }
+.help-section p, .help-section ul, .help-section ol { margin-bottom: 12px; }
+.help-section li { max-width: 65ch; }
+
+.two-phones { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+.two-phones .card { padding: 18px 20px; }
+.two-phones h4 { font-size: 1rem; margin-bottom: 8px; }
+.two-phones ol, .two-phones ul { margin: 0; }
+
+.shot-row { display: flex; gap: 24px; align-items: flex-start; margin: 20px 0; }
+.shot-row .phone { max-width: 220px; flex-shrink: 0; }
+.shot-row .caption { flex: 1; }
+
+.marks { list-style: none; padding: 0; }
+.marks li { display: flex; gap: 12px; align-items: baseline; }
+.marks .sym { width: 28px; text-align: center; font-size: 1.1rem; color: var(--accent); flex-shrink: 0; }
+
+.faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
+.faq-item h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.faq-item p { margin: 0; }
+
+@media (max-width: 860px) {
+  .help-layout { grid-template-columns: minmax(0, 1fr); }
+  .help-sidebar { display: none; }
+  .two-phones { grid-template-columns: 1fr; }
+  .shot-row { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="images/icon.png" alt="">Growing Christians</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="help.html" aria-current="page">Help</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a class="nav-cta" href="index.html#download">Download</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page-content">
+
+  <header class="help-hero">
+    <div class="eyebrow">Help &amp; How-To</div>
+    <h1>Using the Growing Christians app</h1>
+    <p>Listen to all 1,710 <em>Talks for Growing Christians</em>, keep track of every talk you've heard and when,
+       and work your way through the whole Bible — then start again. Everything below works the same on
+       iPhone and Android unless it says otherwise.</p>
+  </header>
+
+  <div class="help-layout">
+
+    <aside class="help-sidebar">
+      <nav>
+        <div class="group">Getting started</div>
+        <a href="#install-android">Install on Android</a>
+        <a href="#install-iphone">Install on iPhone</a>
+        <a href="#tour">The four tabs</a>
+        <div class="group">Listening</div>
+        <a href="#talks">Finding a talk</a>
+        <a href="#playing">Playing a talk</a>
+        <a href="#offline">Offline downloads</a>
+        <div class="group">Keeping track</div>
+        <a href="#heard">What counts as heard</a>
+        <a href="#progress">Progress &amp; rounds</a>
+        <a href="#history">History</a>
+        <a href="#notes">Notes &amp; study notes</a>
+        <div class="group">Your data</div>
+        <a href="#backup">Backup &amp; new phones</a>
+        <a href="#donate">Supporting the ministry</a>
+        <a href="#faq">Questions</a>
+      </nav>
+    </aside>
+
+    <div class="help-content">
+
+      <!-- ───────────────────────── Install: Android ───────────────────────── -->
+      <section class="help-section" id="install-android">
+        <h2><span class="ico">🤖</span>Install on Android</h2>
+        <p>The Android app isn't in the Google Play Store yet, so you install it straight from this website.
+           It takes about a minute.</p>
+        <ol>
+          <li>On your Android phone, open this site and tap <strong>Download for Android</strong> on the
+              <a href="index.html#download">home page</a>. Your phone downloads <code>GrowingChristians.apk</code> (about 20 MB).</li>
+          <li>Open the downloaded file — tap the notification, or find it in your <strong>Downloads</strong> / <strong>My Files</strong> app.</li>
+          <li>The first time, Android says your browser isn't allowed to install apps. Tap <strong>Settings</strong>,
+              turn on <strong>Allow from this source</strong>, then go back.</li>
+          <li>Tap <strong>Install</strong>. If Google Play Protect warns that it doesn't recognize the app, tap
+              <strong>More details → Install anyway</strong>. (That warning appears for any app that doesn't come from the Play Store.)</li>
+          <li>Tap <strong>Open</strong>. You'll find <strong>Growing Christians</strong> with your other apps — a green icon with an open Bible and a sprout.</li>
+        </ol>
+        <div class="tip"><strong>Updating:</strong> when a new version is posted, download and install it the same way.
+          It installs over the old one and keeps your listening history.</div>
+        <p>Needs Android 8 or newer.</p>
+      </section>
+
+      <!-- ───────────────────────── Install: iPhone ───────────────────────── -->
+      <section class="help-section" id="install-iphone">
+        <h2><span class="ico">📱</span>Install on iPhone</h2>
+        <p>The iPhone app is being tested through Apple's <strong>TestFlight</strong> before it goes to the App Store.
+           To try it now, <a href="#faq-contact">ask for a TestFlight invitation</a>. You'll get an email:</p>
+        <ol>
+          <li>Install the free <strong>TestFlight</strong> app from the App Store.</li>
+          <li>Open the invitation email on your iPhone and tap <strong>View in TestFlight</strong>.</li>
+          <li>Tap <strong>Accept</strong>, then <strong>Install</strong>.</li>
+        </ol>
+        <p>Needs iOS 26 or newer.</p>
+      </section>
+
+      <!-- ───────────────────────── Tour ───────────────────────── -->
+      <section class="help-section" id="tour">
+        <h2><span class="ico">🧭</span>The four tabs</h2>
+        <ul>
+          <li><strong>Talks</strong> — your progress, a quick way to continue, and all 66 books of the Bible.</li>
+          <li><strong>Progress</strong> — how far you've come this round, by testament, and how much you've been listening.</li>
+          <li><strong>History</strong> — every talk you've finished, with the date, newest first.</li>
+          <li><strong>About</strong> — the ministry's website, Donate, downloads, backup, and the app version. This is also where the app's settings live.</li>
+        </ul>
+        <p>Whenever a talk is loaded, a <strong>mini player</strong> sits just above the tabs: the passage and title,
+           a 15-second rewind button, and play/pause. Tap it to open the talk.</p>
+      </section>
+
+      <!-- ───────────────────────── Talks ───────────────────────── -->
+      <section class="help-section" id="talks">
+        <h2><span class="ico">📖</span>Finding a talk</h2>
+        <div class="shot-row">
+          <img class="phone" src="images/shot-talks.png" alt="The Talks tab: overall progress bar, Continue and Next Unheard, then the books of the Old Testament">
+          <div class="caption">
+            <p>The top of the <strong>Talks</strong> tab shows how many talks you've heard this round, then two shortcuts:</p>
+            <ul>
+              <li><strong>Continue</strong> — the talk you were partway through.</li>
+              <li><strong>Next Unheard</strong> — the first talk, in Bible order, that you haven't heard yet this round.</li>
+            </ul>
+            <p>Tap the green ▶ to play right away, or the row to open the talk.</p>
+            <p>Below that are the books, Old Testament then New, each with its own progress bar. A gold seal means you've heard every talk in that book.</p>
+            <p><strong>Search</strong> (at the top) finds talks by passage or title — try <em>John 3</em> or <em>prayer</em>.</p>
+          </div>
+        </div>
+
+        <h3>Inside a book</h3>
+        <p>A book shows its progress, a <strong>Next in …</strong> shortcut, and every talk in order. The mark beside each talk tells you where you are:</p>
+        <ul class="marks">
+          <li><span class="sym">✔︎</span><span><strong>Green check</strong> — heard this round. The date you last heard it shows under the title.</span></li>
+          <li><span class="sym">◐</span><span><strong>Half circle</strong> — started but not finished. It will pick up where you stopped.</span></li>
+          <li><span class="sym">○</span><span><strong>Empty circle</strong> — not heard yet this round.</span></li>
+          <li><span class="sym">×2</span><span>A small <strong>×2, ×3…</strong> badge means you've heard that talk more than once.</span></li>
+          <li><span class="sym">⬇︎</span><span>A small <strong>download</strong> mark means it's saved on your phone for offline listening.</span></li>
+        </ul>
+        <div class="two-phones">
+          <div class="card"><h4>iPhone shortcuts</h4>
+            <ul><li>Swipe a talk <strong>right</strong> → <strong>Heard It</strong> (marks it heard today).</li>
+                <li>Swipe a talk <strong>left</strong> → <strong>Play</strong>.</li></ul></div>
+          <div class="card"><h4>Android</h4>
+            <ul><li>Tap a talk to open it, then use <strong>Play</strong> or <strong>Mark as Heard</strong>.</li></ul></div>
+        </div>
+      </section>
+
+      <!-- ───────────────────────── Playing ───────────────────────── -->
+      <section class="help-section" id="playing">
+        <h2><span class="ico">▶️</span>Playing a talk</h2>
+        <div class="shot-row">
+          <img class="phone" src="images/shot-talk.png" alt="A talk's page: Play, Previous and Next Talk, Downloaded, Times Heard, Notes">
+          <div class="caption">
+            <p>Open any talk and tap <strong>Play</strong>. If you stopped partway through before, the button says
+               <strong>Resume</strong> and shows where you'll pick up.</p>
+            <p>While it plays you get:</p>
+            <ul>
+              <li>a slider to jump anywhere, with time played and time left;</li>
+              <li><strong>⟲ 15</strong> back 15 seconds and <strong>30 ⟳</strong> ahead 30 seconds;</li>
+              <li><strong>Speed</strong>: 0.75×, 1×, 1.25×, 1.5×, 1.75× or 2× (remembered for next time);</li>
+              <li><strong>Previous</strong> and <strong>Next Talk</strong> to move through the talks in Bible order.</li>
+            </ul>
+          </div>
+        </div>
+        <p>Talks keep playing with the screen off or while you use other apps. You can pause, skip, and see the talk
+           on your <strong>lock screen</strong> (and on Android, in the notification shade). Unplugging headphones pauses the talk.</p>
+        <p>The app remembers your place every few seconds, so if you're interrupted you can come back later and
+           tap <strong>Resume</strong> — on that talk, from <strong>Continue</strong> on the Talks tab, or from the mini player.</p>
+        <div class="note">Talks <strong>stream from the Growing Christians website</strong>, so playing needs an internet
+          connection unless you've <a href="#offline">downloaded</a> the talk. A 15-minute talk uses about 8–12 MB of data.</div>
+      </section>
+
+      <!-- ───────────────────────── Offline ───────────────────────── -->
+      <section class="help-section" id="offline">
+        <h2><span class="ico">⬇️</span>Offline downloads</h2>
+        <p>Save talks to your phone to listen without internet — in the car, on a plane, or to save mobile data.</p>
+        <h3>Download one talk</h3>
+        <p>Open the talk and tap <strong>Download for Offline</strong> (under Previous / Next). You'll see the percentage
+           while it downloads, then <strong>Downloaded</strong> with its size. Downloaded talks play from your phone automatically.</p>
+        <h3>Download a whole book</h3>
+        <p>Open a book and tap the <strong>download button</strong> in the top-right corner:</p>
+        <ul>
+          <li><strong>Download Unheard Talks</strong> — just the ones you haven't heard this round.</li>
+          <li><strong>Download All</strong> — every talk in the book.</li>
+          <li><strong>Remove Downloaded</strong> — delete this book's downloads.</li>
+        </ul>
+        <p>Talks download one at a time. <strong>On iPhone, keep the app open</strong> while a batch downloads —
+           iPhone pauses downloads when an app sits in the background for long.</p>
+
+        <h3>Removing downloads</h3>
+        <ul>
+          <li><strong>One talk:</strong> open it and tap <strong>Remove</strong>.</li>
+          <li><strong>See them all:</strong> <strong>About → Downloads → Manage Downloads</strong> lists every downloaded talk and the
+              space it uses. Remove one (swipe left on iPhone, tap <strong>×</strong> on Android) or tap <strong>Delete All Downloads</strong>.</li>
+        </ul>
+
+        <h3 id="auto-remove">Remove automatically after listening</h3>
+        <p>In <strong>About → Downloads</strong>, the switch <strong>Remove after I finish a talk</strong> (on to start with)
+           deletes a downloaded talk's file as soon as it plays to the end. Download a book for a trip and the space
+           frees itself up as you go. Turn it off if you'd rather keep downloads until you remove them.</p>
+        <div class="tip">Removing a download <strong>never</strong> changes your history. The talk simply streams again next time.
+          Each talk takes about 8–12 MB, so 100 downloaded talks is roughly 1 GB.</div>
+      </section>
+
+      <!-- ───────────────────────── Heard ───────────────────────── -->
+      <section class="help-section" id="heard">
+        <h2><span class="ico">✅</span>What counts as heard</h2>
+        <p>A talk is recorded as heard — with today's date and time — <strong>when it plays all the way to the end</strong>.
+           Stopping partway doesn't count; you'll see the half circle and can resume later.</p>
+        <p>Each talk's page has a <strong>Times Heard</strong> list showing every date you finished it, so you can
+           see when you heard it the first time and every time after.</p>
+        <h3>Mark as Heard</h3>
+        <p>Heard a talk somewhere else — on the radio, at church, on the website? Open it, tap
+           <strong>Mark as Heard…</strong>, and pick the date (any day up to today). If you don't remember exactly, any date is fine.</p>
+        <h3>Remove a date</h3>
+        <p>Marked one by mistake? In <strong>Times Heard</strong>, swipe the date left (iPhone) or tap its <strong>×</strong> (Android).</p>
+      </section>
+
+      <!-- ───────────────────────── Progress ───────────────────────── -->
+      <section class="help-section" id="progress">
+        <h2><span class="ico">📊</span>Progress &amp; rounds</h2>
+        <div class="shot-row">
+          <img class="phone" src="images/shot-progress.png" alt="The Progress tab: a ring showing percent heard this round, then Old and New Testament bars and listening counts">
+          <div class="caption">
+            <p>The <strong>Progress</strong> tab shows:</p>
+            <ul>
+              <li>a ring with the percentage of all 1,710 talks you've heard <strong>this round</strong>;</li>
+              <li>progress for the <strong>Old Testament</strong> and <strong>New Testament</strong>;</li>
+              <li><strong>Listening</strong>: how many talks you finished this week, this month, this year, and all time, and how many you've heard more than once;</li>
+              <li><strong>Past Rounds</strong>, once you've started over.</li>
+            </ul>
+          </div>
+        </div>
+        <h3>Start Over (a new round)</h3>
+        <p>When you've heard them all — or any time you want a fresh start — tap <strong>Start Over</strong> at the bottom of
+           the Progress tab. Round 2 begins with every talk unchecked so the progress bars fill up again.</p>
+        <p><strong>Nothing is erased.</strong> Every date you heard every talk stays in History and in each talk's
+           Times Heard list (marked with its round). Only listens from the current round fill the progress bars.</p>
+      </section>
+
+      <!-- ───────────────────────── History ───────────────────────── -->
+      <section class="help-section" id="history">
+        <h2><span class="ico">🕘</span>History</h2>
+        <p>The <strong>History</strong> tab lists every talk you've finished, newest first, grouped by month — the day, the passage,
+           and the title, plus “Heard 3 times” for repeats. It answers “When did I hear that?” Tap any entry to open the talk.</p>
+      </section>
+
+      <!-- ───────────────────────── Notes ───────────────────────── -->
+      <section class="help-section" id="notes">
+        <h2><span class="ico">📝</span>Notes &amp; study notes</h2>
+        <p>Every talk has a <strong>Notes</strong> box for your own thoughts. It saves as you type.</p>
+        <p><strong>Study Notes &amp; Printed Version</strong> opens that talk's page on growingchristians.org, with background notes,
+           questions, and a printable transcript from the ministry.</p>
+      </section>
+
+      <!-- ───────────────────────── Backup ───────────────────────── -->
+      <section class="help-section" id="backup">
+        <h2><span class="ico">💾</span>Backup &amp; new phones</h2>
+        <p>Your listening history is stored <strong>only on your phone</strong>. There's no account and nothing is sent anywhere.
+           That also means <strong>if you delete the app, your history is deleted with it</strong> — so make a backup now and then.</p>
+        <h3>Export a backup</h3>
+        <p><strong>About → Export Backup</strong> creates a small file named like
+           <code>2026-11-25_0930_GrowingChristians_Backup.json</code>. Save it to Files / iCloud Drive (iPhone) or
+           Google Drive (Android), or email it to yourself.</p>
+        <h3>Import a backup</h3>
+        <p><strong>About → Import Backup</strong> and pick the file. Importing <strong>adds</strong> what's in the file to what's
+           already on the phone. It never deletes anything, so it's safe to import the same file twice.</p>
+        <div class="tip"><strong>Moving between iPhone and Android:</strong> the backup file works on both. Export on one phone,
+          import on the other, and your whole history — every date, your notes, your rounds — comes across.</div>
+      </section>
+
+      <!-- ───────────────────────── Donate ───────────────────────── -->
+      <section class="help-section" id="donate">
+        <h2><span class="ico">💚</span>Supporting the ministry</h2>
+        <p>The talks are a free gift from Growing Christians Ministries. If they bless you, consider supporting the ministry:
+           <strong>About → Donate to Growing Christians</strong> opens the ministry's own donation page in your web browser.
+           Nothing is paid or collected inside the app.</p>
+      </section>
+
+      <!-- ───────────────────────── FAQ ───────────────────────── -->
+      <section class="help-section" id="faq">
+        <h2><span class="ico">❓</span>Questions</h2>
+
+        <div class="faq-item">
+          <h3>I listened to a talk but it isn't checked.</h3>
+          <p>A talk only counts once it plays to the very end. Open it and tap <strong>Resume</strong> to finish it, or use
+             <strong>Mark as Heard…</strong>.</p>
+        </div>
+        <div class="faq-item">
+          <h3>A talk won't play.</h3>
+          <p>Check your internet connection — talks stream from the ministry's website unless downloaded. Then try again,
+             or download the talk while you have Wi-Fi.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does it work without internet?</h3>
+          <p>Browsing, your history and progress, and <a href="#offline">downloaded talks</a> all work offline. Playing a talk
+             that isn't downloaded needs internet.</p>
+        </div>
+        <div class="faq-item">
+          <h3>I want to start completely fresh.</h3>
+          <p>To restart the progress bars but keep your history, use <a href="#progress">Start Over</a>. To erase everything,
+             delete the app and install it again.</p>
+        </div>
+        <div class="faq-item">
+          <h3>I'm getting a new phone.</h3>
+          <p><a href="#backup">Export a backup</a> on the old phone, install the app on the new one, then Import Backup.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is this app from Growing Christians Ministries?</h3>
+          <p>No. It's an independent app made by a listener to help keep track of the talks. The talks themselves —
+             and all rights to them — belong to <a href="https://www.growingchristians.org/talks-for-growing-christians">Growing Christians Ministries</a>.</p>
+        </div>
+        <div class="faq-item" id="faq-contact">
+          <h3>How do I get help or ask for an iPhone invitation?</h3>
+          <p>Email <a href="mailto:azbarks@gmail.com?subject=Growing%20Christians%20app">azbarks@gmail.com</a>.</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>Growing Christians app · an independent listener's app. Talks © Growing Christians Ministries.</p>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="help.html">Help</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

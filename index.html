@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growing Christians — listen to the talks and keep track</title>
+<meta name="description" content="A free iPhone and Android app for the 1,710 Talks for Growing Christians: listen, remember which talks you've heard and when, download for offline, and work through the whole Bible.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero {
+  display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center;
+  padding: 64px 0 56px;
+}
+.hero-icon { width: 84px; height: 84px; border-radius: 19px; box-shadow: var(--shadow); margin-bottom: 18px; }
+.hero h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+.hero .lead { font-size: 1.18rem; color: var(--ink-muted); margin: 16px 0 26px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-shot { display: flex; justify-content: center; }
+
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 24px 0 64px; }
+.features .card h3 { font-size: 1.12rem; margin: 10px 0 6px; }
+.features .card p { color: var(--ink-muted); font-size: .98rem; }
+.features .ico { font-size: 1.6rem; }
+
+.section-title { font-size: clamp(1.6rem, 3vw, 2.1rem); margin: .35em 0 .9em; }
+
+.download { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; scroll-margin-top: 80px; }
+.download .card h3 { font-size: 1.25rem; margin-bottom: 6px; }
+.download .card p { color: var(--ink-muted); margin-bottom: 18px; }
+.download .fine { font-size: .88rem; color: var(--ink-muted); margin-top: 14px; }
+
+.credit { margin-top: 64px; }
+.credit p { color: var(--ink-muted); }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; padding-top: 40px; }
+  .features, .download { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="images/icon.png" alt="">Growing Christians</a>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="help.html">Help</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a class="nav-cta" href="#download">Download</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page-content">
+
+  <section class="hero">
+    <div>
+      <img class="hero-icon" src="images/icon.png" alt="Growing Christians app icon">
+      <div class="eyebrow">For iPhone &amp; Android · Free</div>
+      <h1>Every talk. Every book of the Bible. Never lose your place.</h1>
+      <p class="lead">Listen to all 1,710 <em>Talks for Growing Christians</em> and let the app remember which ones
+        you've heard — and when. Work through the whole Bible, then start a new round without losing a thing.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#download">Download the app</a>
+        <a class="btn btn-ghost" href="help.html">How it works</a>
+      </div>
+    </div>
+    <div class="hero-shot">
+      <img class="phone" src="images/shot-talks.png" alt="The Talks tab showing progress, Continue, Next Unheard and the books of the Bible">
+    </div>
+  </section>
+
+  <div class="eyebrow">What it does</div>
+  <h2 class="section-title">Made for listening day after day</h2>
+  <div class="features">
+    <div class="card"><div class="ico">▶️</div><h3>Listen anywhere</h3>
+      <p>Talks play with the screen off, with lock-screen controls, adjustable speed, and 15-second rewind.</p></div>
+    <div class="card"><div class="ico">✅</div><h3>Know what you've heard</h3>
+      <p>A talk is checked off when it plays to the end, with the date. Re-listens are counted too.</p></div>
+    <div class="card"><div class="ico">⏯️</div><h3>Pick up where you left off</h3>
+      <p>Continue and Next Unheard take you straight to the right talk. Stopped halfway? It resumes.</p></div>
+    <div class="card"><div class="ico">📊</div><h3>See your progress</h3>
+      <p>Progress for every book and testament, and how much you've listened this week, month and year.</p></div>
+    <div class="card"><div class="ico">🔁</div><h3>Start a new round</h3>
+      <p>Heard them all? Start Over unchecks every talk — and keeps your full history.</p></div>
+    <div class="card"><div class="ico">⬇️</div><h3>Offline downloads</h3>
+      <p>Download a talk or a whole book for the car or a trip. Downloads can clear themselves once heard.</p></div>
+  </div>
+
+  <div class="eyebrow">Get it</div>
+  <h2 class="section-title" id="download">Download</h2>
+  <div class="download">
+    <div class="card">
+      <h3>🤖 Android</h3>
+      <p>Install directly from this site. Works on Android 8 and newer.</p>
+      <a class="btn btn-primary" href="downloads/GrowingChristians.apk" download>Download for Android <small>· 20 MB</small></a>
+      <p class="fine">Your phone will ask you to allow installing from your browser the first time.
+        <a href="help.html#install-android">Step-by-step instructions</a>.</p>
+    </div>
+    <div class="card">
+      <h3>📱 iPhone</h3>
+      <p>Being tested before it goes to the App Store. Ask for a TestFlight invitation to try it now.</p>
+      <a class="btn btn-ghost" href="mailto:azbarks@gmail.com?subject=Growing%20Christians%20iPhone%20invitation">Request an invitation</a>
+      <p class="fine"><a href="help.html#install-iphone">How TestFlight works</a>.</p>
+    </div>
+  </div>
+
+  <section class="credit">
+    <div class="note">
+      <p><strong>About the talks.</strong> The <em>Talks for Growing Christians</em> — fifteen-minute talks through every
+        book of the Bible — are produced by
+        <a href="https://www.growingchristians.org/talks-for-growing-christians">Growing Christians Ministries</a>, who own
+        all rights to them. This independent app streams the talks from their website and keeps track of your listening.
+        If the talks bless you, please consider supporting the ministry (About → Donate in the app).</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>Growing Christians app · an independent listener's app. Talks © Growing Christians Ministries.</p>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="help.html">Help</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
