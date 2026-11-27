@@ -5,9 +5,9 @@ Android: `../GrowingChristians-Android`). Same pattern as `../bookit_website`: p
 shared `style.css`, no build step, no JavaScript. Intended for GitHub Pages as repo
 **GrowingChristians-Website** → https://azbarks.github.io/GrowingChristians-Website
 
-**Not public yet.** The talks and the "Growing Christians" name belong to Growing Christians
-Ministries; Bruce is asking the ministry (a friend) before publishing. Keep the "independent
-listener's app" disclaimer on every page.
+**Permission granted 2026-11-27:** Growing Christians Ministries (who own the talks and the name)
+allowed Bruce to distribute the apps. The site can go public. Keep the "independent listener's app"
+disclaimer on every page. The iPhone app's About links to `help.html` and `privacy.html` — don't rename them.
 
 ## Pages
 - `index.html` — hero (Talks tab screenshot), feature cards, **Download** (`#download`):
